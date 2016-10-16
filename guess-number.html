@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guess the number</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <style>
+        h1 {color: #33f7f0;}
+        body {background-color: #6b04f2;}
+        p {color: #fff;}
+
+        .div_text_shadow {
+            color: #33f7f0;
+            font-size: 450px;
+            position: relative;
+           top: -3px;
+           left: -3px;
+           text-shadow: 1px 1px #12b5af,
+                        2px 2px #12b5af,
+                        3px 3px #12b5af,
+                        4px 4px #12b5af,
+                        5px 5px #12b5af,
+                        6px 6px #12b5af;
+           text-align: center;
+
+        }
+            </style>
+</head>
+<body>
+<h1>guess the number</h1>
+<p><u>Instructions:</u> Please put any number in between 99 and 1.</p>
+<input type="number" max="99" min="1" id="guess"/>
+<button id="guessButton">submit</button>
+
+<div class="div_text_shadow">2 5</sss
+    var randomNumber = Math.round( Math.random() * 100);
+    $("#guess").focus();
+
+    $("#guessButton").click(
+        function(){
+
+            var guess = $("#guess").val();
+            if (guess == randomNumber) {
+                alert("correct");
+            } else if(guess < randomNumber){
+                alert("Too low. Try again!");
+            } else {
+                alert ("Too high. Try again!");
+            }
+            $("#guess").focus();
+        }
+    );
+
+</script>
+</body>
+</html>
+
+
