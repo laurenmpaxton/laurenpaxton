@@ -43,6 +43,7 @@
             var guess = $("#guess").val();
             if (guess == randomNumber) {
                 alert("correct");
+                randomNumber = Math.round( Math.random() * 100);
             } else if(guess < randomNumber){
                 alert("Too low. Try again!");
             } else {
